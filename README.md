@@ -1,6 +1,6 @@
-# Electronics Store Sales Analysis
+# ELECTRONIC STORE SALES ANALYSIS
 
-An end-to-end sales analysis of a fictional electronics retailer built to identify which products, cities and times of day generate the highest-value orders using **Power Query** for data cleaning, **Excel** for pivot table analysis and **Tableau** for interactive visualization
+An end-to-end sales analysis project built with **Power Query, Excel Pivot Tables/Charts,** and **Tableau**. The goal was to practice the full analyst workflow, cleaning raw data, analysing and presenting findings using the electronics store 2019 sales records.
 
 ---
 
@@ -10,7 +10,9 @@ An end-to-end sales analysis of a fictional electronics retailer built to identi
 
 ## Question:
 
-> Which product, city, and hour-of-day combination generates the highest-value orders, and does that change by month that marketing spend can be targeted by _when_, _where_, and _what_ to promote?
+> Which product, city and time of day generate the highest sales and does that pattern change month to month accross the year?
+
+_Knowing the answer helps a business decide **what to promote, where and when** so marketing spend isn't waster_
 
 ## Dataset
 
@@ -22,69 +24,67 @@ An end-to-end sales analysis of a fictional electronics retailer built to identi
 
 ### 1. Data Cleaning (Power Query)
 
-- Removing duplicates, null/blank rows
-- Changing data types
-- Splitting Order Date into Month (name and number) and Order Hour
-- Calculating Sales column
-- Splitting Purchase Address into Address 1, City and ZIP Code
-- Creating Order Size and Group Hour column
+- Removed duplicate rows and blank/null records
+- Corrected data taypes (numbers, dates, text)
+- Combined all 12 monthly CSV files into one table
 
 #### Derived Columns (Power Query)
 
-| Column                         | Derived From                   | How | Why |
-| ------------------------------ | ------------------------------ | --- | --- |
-| Order Hour                     | Order Date                     |     |     |
-| City, Address line 1, ZIP Code | Purchase Order                 |     |     |
-| Sales                          | Price Each \* Quantity Ordered |     |     |
-| Month Name                     | Order Date                     |     |     |
-| Month Number                   | Order Date                     |     |     |
-| Order Size                     |                                |     |     |
-| Group Hours                    | Order Hour                     |     |     |
+| Column                    | Derived From              | How                                                                | Why                                                     |
+| ------------------------- | ------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
+| Sales                     | Price \* Quantity Ordered | Custom column                                                      | Gives total revenue per line item                       |
+| Order Hour                | Order Date                | Extracted Hour                                                     | Need to find peak shopping times                        |
+| Month Name / Month Number | Order Date                | Extracted month                                                    | Need to sport seasonal trends                           |
+| Address 1, City, ZIP Code | Purchase Order            | Split by comma                                                     | Need City as its own field to analyze sales by location |
+| Order Size                | Quantity Ordered          | Grouped into Single item, Small, Bulk                              | Helps compare small vs bulk purchases                   |
+| Group Hours               | Order Hour                | Grouped into time blocks (Morning, Afternoon, Evening, Late Night) | Makes hourly patterns easier to read                    |
 
 ### 2. Data Analysis (Excel Pivot Tables & Charts)
 
 Six Pivot Tables and Two Charts were built.
 
-- **Product Performance Table**
-- **City Performance Table**
-- **Hour Performance Table**
-- **Hour Sales Performance Chart**
-- **Monthly Trend Table**
-- **Monthly Sales Performance Chart**
-- **Peak Sales Hours**
-- **City-Product-Time Breakdown**
+- **Product Performance Table** --> Total sales and orders by product per order size
+- **City Performance Table** --> Total sales, order count and average sale per city
+- **Hour Performance Table** --> orders by hour of day
+- **Hour Sales Performance Chart** --> visualizaing the hourly pattern
+- **Monthly Trend Table** --> sales by month
+- **Monthly Sales Performance Chart** --> visualizing the seasonal pattern
+- **Peak Sales Hours** --> Top-performing hours combined with order size
+- **City-Product-Time Breakdown** --> cross-tab of top products by city and time of day
 
 ### 3. Data Visualization (Tableau)
 
 ## Key Findings
 
-- The Macbook Pro Laptop ($7.85M) and iPhone ($4.70M) are top two products by sales and both are purchased as Single Item orders. This means marketing for these products should focus on driving getting someone to buy at all and not on cross-sell or bundle offers.
+- **TOP PRODUCTS:** The Macbook Pro Laptop ($7.85M) and iPhone ($4.70M) are top two products by sales and both are purchased as Single Item orders. This means marketing for these products should focus on driving getting someone to buy at all and not on cross-sell or bundle offers.
 
-- The San Francisco generates the most total sales ($8.06M) and the most orders (42,898) but the Sales per Order ($187.77) is actually lower than New York City ($191.51) and other cities. This means that San Francisco lead reflects market size not higher-spending customers.
+- **TOP CITY ≠ BEST CUSTOMER VALUE:** The San Francisco generates the most total sales ($8.06M) and the most orders (42,898) but the Sales per Order ($187.77) is actually lower than New York City ($191.51) and other cities. This means that San Francisco lead reflects market size not higher-spending customers.
 
-- The Orders are lowest overnight and climb toward two distinct peaks which is late morning and evening. This suggests two separate shopping windows rather than one steady climb can be worth targeting with separate campaigns.
+- **TWO DAILY SHOPPING PEAKS:** The Orders are lowest overnight and climb toward two distinct peaks which is late morning and evening. This suggests two separate shopping windows rather than one steady climb can be worth targeting with separate campaigns.
 
-- December sales ($4.51M) are more than double January ($1.78M) and are the highest than any month and with October ($3.65M) as a secondary peak. This points to a clear holiday-driven seasonal pattern worth planning inventory and spending around.
+- **CLEAR HOLIDAY SEASON:** December sales ($4.51M) are more than double January ($1.78M) and are the highest than any month and with October ($3.65M) as a secondary peak. This points to a clear holiday-driven seasonal pattern worth planning inventory and spending around.
 
-- AA and AAA Batteries have among the highest unit-order counts in all Order Size categories but even in their best-case Bulk Order they generate only $1,728-$4,105 combined which a fraction of what a single high-ticket product category brings in. Bulk purchase promotions are not an effective lever for these products.
+- **BATTERIES DON'T SCALE WELL:** AA and AAA Batteries have among the highest unit-order counts in all Order Size categories but even in their best-case Bulk Order they generate only $1,728-$4,105 combined which a fraction of what a single high-ticket product category brings in. Bulk purchase promotions are not an effective lever for these products.
 
-- Across the cities, Macbook Pro Laptop and iPhone generate their highest revenue in the Evening this confirm that the daily sales peak identified in Hour performance is being driven primarily by premium product purchases, not accessories.
+- **EVENING DRIVES THE PEAKS:** Across the cities, Macbook Pro Laptop and iPhone generate their highest revenue in the Evening this confirm that the daily sales peak identified in Hour performance is being driven primarily by premium product purchases, not accessories.
 
 ## Recommendation
 
 Based on the analysis, the business should:
 
-1.
-2.
-3.
-4.
-5.
+1. **Focus premium product ads (MacBook Pro, iPhone) in the evening,** since that's when high purchases are already happening
+2. **Run two separate daily campaigns** one for the late-morning window and one for the evening window instead of one all-day campaign
+3. **Increase marketing spend heading into October-December** to capture the holiday demand spike and scale back in slower months like January
+4. **Treat San Francisco as a volume market not a high-value market** pair it with cities like New York where the average order value is higher
+5. **Avoid bulk-buy promotions for low-cost accessories** like batteries, the revenue upside is too small ot justify the discount
 
 ## Tools Used
 
-- **Power Query** - Data Cleaning, Derived Columns
-- **Excel** - Pivot Tables, Pivot Charts
-- **Tableau Public** - Interactive Dashboard and Visualization
+| Tools          | Purpose                                                        |
+| -------------- | -------------------------------------------------------------- |
+| Power Query    | Data cleaning, merging monthly files, creating derived columns |
+| Excel          | Pivot tables and Pivot Charts for analysis                     |
+| Tableau Public | Interactive dashboard for visualization                        |
 
 ## Repository Structure
 
@@ -104,3 +104,5 @@ Based on the analysis, the business should:
 ```
 
 ## About This Project
+
+This project was built as a hands-on way to practice a full analyst workflow from start to finish, cleaning messy raw data in Power Query, analyzing it with Excel pivot tables and charts, and presenting the results in an interactive Tableau dashboard.
