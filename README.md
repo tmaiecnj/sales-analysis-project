@@ -1,5 +1,11 @@
 # ELECTRONIC STORE SALES ANALYSIS
 
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-00599C?style=for-the-badge&logo=databricks&logoColor=white)
+
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Power Query](https://img.shields.io/badge/Power%20Query-217346?style=for-the-badge&logo=microsoft&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+
 An end-to-end sales analysis project built with **Power Query, Excel Pivot Tables/Charts,** and **Tableau**. The goal was to practice the full analyst workflow, cleaning raw data, analysing and presenting findings using the electronics store 2019 sales records.
 
 ---
