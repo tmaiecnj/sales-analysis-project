@@ -4,7 +4,7 @@ An end-to-end sales analysis of a fictional electronics retailer built to identi
 
 ---
 
-**Live Dashboard:** []
+**Live Dashboard:** [Electronic Store Sales Dashboard]()
 
 **Excel Workbook:** [`Sales_Analysis.xlsx`](./Sales_Analysis.xlsx)
 
