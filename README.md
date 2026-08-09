@@ -62,7 +62,7 @@ Six Pivot Tables and Two Charts were built.
 
 _Click the dashboard image to view the interactive Tableau dashboard._
 
-[![Electronic Store Sales Dashboard](images\ES_Dashboard.png)](https://public.tableau.com/shared/FDTY34F9C?:display_count=n&:origin=viz_share_link)
+[![Electronic Store Sales Dashboard](./images/ES_Dashboard.png)](https://public.tableau.com/shared/FDTY34F9C?:display_count=n&:origin=viz_share_link)
 
 ## Key Findings
 
