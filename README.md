@@ -18,7 +18,7 @@ An end-to-end sales analysis project built with **Power Query, Excel Pivot Table
 
 > Which product, city and time of day generate the highest sales and does that pattern change month to month accross the year?
 
-_Knowing the answer helps a business decide **what to promote, where and when** so marketing spend isn't waster_
+_Knowing the answer helps a business decide **what to promote, where and when** so marketing spend isn't wasted_
 
 ## Dataset
 
@@ -31,7 +31,7 @@ _Knowing the answer helps a business decide **what to promote, where and when** 
 ### 1. Data Cleaning (Power Query)
 
 - Removed duplicate rows and blank/null records
-- Corrected data taypes (numbers, dates, text)
+- Corrected data types (numbers, dates, text)
 - Combined all 12 monthly CSV files into one table
 
 #### Derived Columns (Power Query)
@@ -40,8 +40,8 @@ _Knowing the answer helps a business decide **what to promote, where and when** 
 | ------------------------- | ------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
 | Sales                     | Price \* Quantity Ordered | Custom column                                                      | Gives total revenue per line item                       |
 | Order Hour                | Order Date                | Extracted Hour                                                     | Need to find peak shopping times                        |
-| Month Name / Month Number | Order Date                | Extracted month                                                    | Need to sport seasonal trends                           |
-| Address 1, City, ZIP Code | Purchase Order            | Split by comma                                                     | Need City as its own field to analyze sales by location |
+| Month Name / Month Number | Order Date                | Extracted month                                                    | Need to spot seasonal trends                            |
+| Address 1, City, ZIP Code | Purchase Address          | Split by comma                                                     | Need City as its own field to analyze sales by location |
 | Order Size                | Quantity Ordered          | Grouped into Single item, Small, Bulk                              | Helps compare small vs bulk purchases                   |
 | Group Hours               | Order Hour                | Grouped into time blocks (Morning, Afternoon, Evening, Late Night) | Makes hourly patterns easier to read                    |
 
