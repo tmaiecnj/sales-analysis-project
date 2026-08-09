@@ -12,7 +12,7 @@ An end-to-end sales analysis project built with **Power Query, Excel Pivot Table
 
 **Live Dashboard:** [Electronic Store Sales Dashboard](https://public.tableau.com/shared/FDTY34F9C?:display_count=n&:origin=viz_share_link)
 
-**Excel Workbook:** [`Sales_Analysis.xlsx`](./Sales_Analysis.xlsx)
+**Excel Workbook:** [Sales_Analysis.xlsx](./Sales_Analysis.xlsx)
 
 ## Question:
 
@@ -86,7 +86,7 @@ Based on the analysis, the business should:
 2. **Run two separate daily campaigns** one for the late-morning window and one for the evening window instead of one all-day campaign
 3. **Increase marketing spend heading into October-December** to capture the holiday demand spike and scale back in slower months like January
 4. **Treat San Francisco as a volume market not a high-value market** pair it with cities like New York where the average order value is higher
-5. **Avoid bulk-buy promotions for low-cost accessories** like batteries, the revenue upside is too small ot justify the discount
+5. **Avoid bulk-buy promotions for low-cost accessories** like batteries, the revenue upside is too small to justify the discount
 
 ## Tools Used
 
