@@ -1,6 +1,8 @@
 # ELECTRONIC STORE SALES ANALYSIS
 
 ![Data Analysis](https://img.shields.io/badge/Data%20Analysis-00599C?style=for-the-badge&logo=databricks&logoColor=white)
+![Data Visualization](https://img.shields.io/badge/Data%20Visualization-00599C?style=for-the-badge&logo=databricks&logoColor=white)
+![ETL / Data Transformation](https://img.shields.io/badge/ETL%20/%20Data%20Transformation-00599C?style=for-the-badge&logo=databricks&logoColor=white)
 
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 ![Power Query](https://img.shields.io/badge/Power%20Query-217346?style=for-the-badge&logo=microsoft&logoColor=white)
